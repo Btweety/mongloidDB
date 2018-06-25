@@ -2,8 +2,6 @@ package com.example.mongloidDB;
 
 import java.util.Iterator;
 
-import com.mongodb.client.MongoIterable;
-
 public class App {
 	
 	public static void main( String[] args ){
@@ -12,10 +10,12 @@ public class App {
     	String db = "shiftsWorks";
     	
     	Mongo mongodb = new Mongo(username, password, db, "localhost", 27017, false);
-    	Iterator mongit = mongodb.getCollections().iterator();
+    	Iterator<String> mongit = mongodb.getCollections().iterator();
     	
     	while(mongit.hasNext()) {
-    		System.out.println((String) mongit.next());
+    		System.out.println(mongit.next());
     	}
+    	
+    	mongodb.close();
     }
 }

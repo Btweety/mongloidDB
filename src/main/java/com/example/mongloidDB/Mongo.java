@@ -50,4 +50,28 @@ public class Mongo {
 	public MongoIterable<String> getCollections(){
 		return database.listCollectionNames();
 	}
+	
+	public void addUser() {
+		/*
+		 * TODO
+		 */
+	}
+	public void addSchedule() {
+		/*
+		 * TODO
+		 */
+	}
+	public void addCompany() {
+		/*
+		 * TODO
+		 */
+	}
+	
+	
+	public void close() {
+		mongoclient.close();
+	}
+	
+	
+	
 }
